@@ -79,10 +79,6 @@ detection. Because the 11-band stack includes the near-infrared band, it also
 computes **NDVI** = (NIR − Red)/(NIR + Red) for both dates, giving a vegetation
 signal that RGB alone cannot provide.
 
-> *Assumption:* the band → index assignment used for NDVI (Red, Green, NIR) is
-> taken from the known Sentinel-2 band order of the stack. This is stated as an
-> assumption; if the stacking order is confirmed, NDVI is exact, otherwise it is
-> indicative.
 
 ### 1.5 Why PCA
 
@@ -125,10 +121,6 @@ variance (0.70), and the additional bands — especially NIR via NDVI — provid
 vegetation contrast that RGB cannot. Exact agreement with the 3-band figures is
 not expected, as the two products differ in source processing, grid, resolution,
 and the seam correction applied to the 11-band mosaic.
-
-*(Figures: `change_overview.png` — before / after / PCA intensity / detected
-change with the AOI outline; `change_map.html` — interactive AOI + change
-polygons; NDVI before/after plots in the 11-band notebook.)*
 
 ---
 
